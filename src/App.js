@@ -3,15 +3,17 @@ import { useEffect, useState } from "react"
 import './App.css';
 import Bulldog from "./components/Bulldog"
 import PitBull from "./components/PitBull"
+import {shoeBrands, callAPI} from "./utils/names"
 
 //CRUD 
 
 function App() {
 
-  const [number, setNumber] = useState(1)
+  const [number, setNumber] = useState(1)//2
   const [number1, setNumber1] = useState(1)
   const [number2, setNumber2] = useState(1)
   const [number3, setNumber3] = useState(1)
+  const [nameBulldog, setNameBulldog] = useState("RUNA")
 
                               //[1, function(){...}]
 
@@ -27,8 +29,8 @@ function App() {
 
   var getBulldogName = (event) =>{
     console.log(event)
-    console.log("Button Is Working Yay!")
     var newNum = number + 1
+    //3
     setNumber(newNum)
   }
 
@@ -37,8 +39,9 @@ function App() {
       <header className="App-header">
         <h1>whats up yall</h1>
         <PitBull name="kiki" breed="red heeler" age={7} favFood="poop" />
-        <Bulldog />
+        <Bulldog dogName={nameBulldog} setNameBulldog={setNameBulldog}/>
         <PitBull name="runa" breed="pit" age={5} favFood="anything" />
+        <div>{nameBulldog}</div>
       </header>
 
       <div>
