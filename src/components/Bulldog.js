@@ -14,7 +14,7 @@ props.setNameBulldog(randomShoe)
 
     return(
       <div>
-        <div onClick={e => changeDogName(e)}>{props.dogName}</div>
+        <div onClick={e => changeDogName(e)}>THIS IS A BUTTON</div>
       </div>
     )
   }

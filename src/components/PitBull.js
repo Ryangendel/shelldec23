@@ -1,11 +1,11 @@
 function PitBull(props){
-  
+  console.log(props)
     return(
       <div>
-        <div></div>
-        <div>{props.breed}</div>
-        <div>{props.age}</div>
-        <div>{props.favFood}</div>
+        <div>{props.names.runa.name}</div>
+        <div>{props.names.kiki.name}</div>
+        <div>brred = pit</div>
+
       </div>
     )
   }
